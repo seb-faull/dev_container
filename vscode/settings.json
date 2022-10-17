@@ -1,0 +1,9 @@
+{
+    "files.eol": "\n",
+    "files.associations": {
+        "**/<dbt-project-dir>/**/*.yaml": "jinja-yaml",
+        "**/<dbt-project-dir>/**/*.yml": "jinja-yaml",
+        "**/<dbt-project-dir>/**/*.sql": "jinja-sql",
+        "**/<dbt-project-dir>/**/docs/**/*.md": "jinja-md"
+    }
+}

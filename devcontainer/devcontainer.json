@@ -1,0 +1,51 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.205.2/containers/python-3
+{
+	"name": "PPL Development Container (Glue3, Python3.9, AWS CLI 2, dbt 1)",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"context": ".",
+		"args": { 
+			"NODE_VERSION": "none"
+		}
+	}, 
+	"settings": { 
+		"files.associations": {
+			"**/<dbt-project-dir>/**/*.yaml": "jinja-yaml",
+			"**/<dbt-project-dir>/**/*.yml": "jinja-yaml",
+			"**/<dbt-project-dir>/**/*.sql": "jinja-sql",
+			"**/<dbt-project-dir>/**/docs/**/*.md": "jinja-md"
+		}
+	},
+
+	"runArgs": ["--env-file", ".devcontainer/.env"],
+
+	// Add the IDs of extensions you want installed when the container is created.
+	"extensions": [
+		"ms-python.python",
+		"ms-python.vscode-pylance",
+		"aws-scripting-guy.cform",
+		"dorzey.vscode-sqlfluff",
+		"bastienboutonnet.vscode-dbt",
+		"AmazonWebServices.aws-toolkit-vscode"
+	],
+
+	// mount the aws cli from your local host, comment out if you do not have aws cli installed, or change location if you have install
+	// ususl mount location is ~/.aws on mac/linux or C:\USERS\<user_name>\.aws
+	// reauires users to have a director named git in either ~ on mac/linux or C:\USERS\<user_name>
+
+    "mounts": [
+        "source=${localEnv:HOME}${localEnv:USERPROFILE}/.aws,target=/root/.aws,type=bind",
+        "source=${localEnv:HOME}${localEnv:USERPROFILE}/git,target=/workspaces/adp-development-workspace/git-repos,type=bind"
+    ],  
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "pip3 install --user -r requirements.txt",
+
+	// Comment out connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+	// "remoteUser": "vscode"
+	
+}

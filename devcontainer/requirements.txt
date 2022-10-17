@@ -1,0 +1,14 @@
+###### snowflake python  ######
+snowflake-connector-python[secure-local-storage]==2.7.0
+
+##### dbt ######
+dbt-snowflake==1.0.0
+
+##### useful stuff ######
+virtualenv==20.14.1
+pandas==1.4.2
+argparse==1.4.0
+ruamel.yaml==0.17.17
+sqlfluff==1.0.0
+pyarrow==8.0.0
+fastparquet==0.8.1
