@@ -1,0 +1,27 @@
+version: 2
+models:
+  - name: cur_aln_dbo_c_status
+    description: Alliant source table called C_STATUS
+    columns:
+      - name: status_sid
+        description: Column in C_STATUS called STATUS_SID
+      - name: unique_identity
+        description: Column in C_STATUS called UNIQUE_IDENTITY
+        tests:
+          - unique
+      - name: status_id
+        description: Column in C_STATUS called STATUS_ID
+      - name: descr
+        description: Column in C_STATUS called DESCR
+      - name: comment
+        description: Column in C_STATUS called COMMENT
+      - name: system_modified_datetime
+        description: Column in C_STATUS called SYSTEM_MODIFIED_DATETIME
+      - name: TRACKING_HASH
+        description: SCD2 standard column
+      - name: ROW_START_AT
+        description: SCD2 standard column
+      - name: ROW_END_AT
+        description: SCD2 standard column
+      - name: ROW_IS_CURRENT
+        description: SCD2 standard column
