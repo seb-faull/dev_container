@@ -1,0 +1,7 @@
+table_name,table_description,curated_dbt_type,column_name,column_description,source_data_type,column_type,column_tests
+C_STATUS,Alliant source table called C_STATUS,scd2,status_sid,Column in C_STATUS called STATUS_SID,"NUMBER(38,0)",,
+C_STATUS,Alliant source table called C_STATUS,scd2,unique_identity,Column in C_STATUS called UNIQUE_IDENTITY,VARCHAR(50),unique_key,unique
+C_STATUS,Alliant source table called C_STATUS,scd2,status_id,Column in C_STATUS called STATUS_ID,VARCHAR(60),,
+C_STATUS,Alliant source table called C_STATUS,scd2,descr,Column in C_STATUS called DESCR,VARCHAR(255),,
+C_STATUS,Alliant source table called C_STATUS,scd2,comment,Column in C_STATUS called COMMENT,VARCHAR(1000),,
+C_STATUS,Alliant source table called C_STATUS,scd2,system_modified_datetime,Column in C_STATUS called SYSTEM_MODIFIED_DATETIME,TIMESTAMP_NTZ,updated_date,
